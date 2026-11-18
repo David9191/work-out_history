@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T05:39:37+00:00",
+  "title": "Design System: 운동 기록",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "바탕",
+        "canonical": "#EEF1EF",
+        "tonalRamp": [
+          "#3C3C3C",
+          "#6B6C6C",
+          "#9B9D9B",
+          "#CACDCB",
+          "#F1F4F2",
+          "#F6F7F6",
+          "#FAFBFA",
+          "#FDFEFD"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "표 흰색",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#404040",
+          "#737373",
+          "#A6A6A6",
+          "#D9D9D9",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "잉크",
+        "canonical": "#121212",
+        "tonalRamp": [
+          "#040404",
+          "#080808",
+          "#0C0C0C",
+          "#0F0F0F",
+          "#414141",
+          "#7D7D7D",
+          "#B8B8B8",
+          "#E7E7E7"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "보조 잉크",
+        "canonical": "#4F5752",
+        "tonalRamp": [
+          "#141614",
+          "#242725",
+          "#333935",
+          "#434A46",
+          "#727975",
+          "#9EA3A0",
+          "#CACDCB",
+          "#EDEEEE"
+        ]
+      },
+      "hair": {
+        "role": "neutral",
+        "displayName": "가는 괘선",
+        "canonical": "#C9CFCB",
+        "tonalRamp": [
+          "#323433",
+          "#5A5D5B",
+          "#838784",
+          "#ABB0AD",
+          "#D4D9D5",
+          "#E1E5E2",
+          "#EFF1EF",
+          "#FAFAFA"
+        ]
+      },
+      "green": {
+        "role": "primary",
+        "displayName": "전나무 초록",
+        "canonical": "#0B5D44",
+        "tonalRamp": [
+          "#031711",
+          "#052A1F",
+          "#073C2C",
+          "#094F3A",
+          "#3C7D69",
+          "#79A698",
+          "#B6CEC7",
+          "#E7EFEC"
+        ]
+      },
+      "green-ink": {
+        "role": "primary",
+        "displayName": "완료 도장 초록",
+        "canonical": "#0B6B4B",
+        "tonalRamp": [
+          "#031B13",
+          "#053022",
+          "#074631",
+          "#095B40",
+          "#3C896F",
+          "#79AE9C",
+          "#B6D3C9",
+          "#E7F0ED"
+        ]
+      },
+      "green-tint": {
+        "role": "primary",
+        "displayName": "새싹 틴트",
+        "canonical": "#E6F1EA",
+        "tonalRamp": [
+          "#3A3C3A",
+          "#676C69",
+          "#969D98",
+          "#C4CDC7",
+          "#EBF4EE",
+          "#F1F7F3",
+          "#F8FBF9",
+          "#FCFEFD"
+        ]
+      },
+      "on-green-muted": {
+        "role": "primary",
+        "displayName": "띠 위 보조 글자",
+        "canonical": "#D5E8DE",
+        "tonalRamp": [
+          "#353A38",
+          "#606864",
+          "#8A9790",
+          "#B5C5BD",
+          "#DDEDE5",
+          "#E8F2ED",
+          "#F2F8F5",
+          "#FBFDFC"
+        ]
+      },
+      "yellow": {
+        "role": "secondary",
+        "displayName": "기록 노랑",
+        "canonical": "#FFD23F",
+        "tonalRamp": [
+          "#403410",
+          "#735E1C",
+          "#A68829",
+          "#D9B236",
+          "#FFDB65",
+          "#FFE695",
+          "#FFF2C5",
+          "#FFFAEC"
+        ]
+      },
+      "red": {
+        "role": "tertiary",
+        "displayName": "초과 빨강",
+        "canonical": "#C3301E",
+        "tonalRamp": [
+          "#310C08",
+          "#58160E",
+          "#7F1F14",
+          "#A6291A",
+          "#CF594B",
+          "#DE8D83",
+          "#EDC1BC",
+          "#F9EAE8"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "셸 띠 제목, 열량·단백질 큰 수치, 휴식 타이머."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "라벨 제목(영양정보, 종목 정보)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "펼친 종목 이름, 지금 세트 스테퍼 값, 영양 퍼센트."
+      },
+      "title-sm": {
+        "displayName": "Title small",
+        "purpose": "패널 제목, 루틴 이름, 기록 최고값."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "기본 글자와 입력."
+      },
+      "body-sm": {
+        "displayName": "Body small",
+        "purpose": "표 행."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "폼 라벨, 고스트·칩·탭 버튼."
+      },
+      "label-sm": {
+        "displayName": "Label small",
+        "purpose": "열 머리, 탭바 라벨, 태그."
+      }
+    },
+    "strokes": [
+      {
+        "name": "heavy",
+        "value": "7px solid #121212",
+        "purpose": "패널·대화상자 윗변, 라벨 머리 아래."
+      },
+      {
+        "name": "rule-3",
+        "value": "3px solid #121212",
+        "purpose": "열 머리 아래, 큰 영양 항목 아래, 탭바 윗변."
+      },
+      {
+        "name": "line",
+        "value": "1.5px solid #121212",
+        "purpose": "외곽 테두리(패널, 입력, 버튼, 칩)."
+      },
+      {
+        "name": "rule-1",
+        "value": "1px solid #121212",
+        "purpose": "표 첫 행, 영양 세부 행."
+      },
+      {
+        "name": "hairline",
+        "value": "1px solid #C9CFCB",
+        "purpose": "데이터 행 사이."
+      }
+    ],
+    "shadows": [
+      {
+        "name": "dock-float",
+        "value": "0 6px 18px rgb(18 18 18 / .22)",
+        "purpose": "하단 독(다음 세트 버튼, 휴식 타이머)에만."
+      }
+    ],
+    "motion": [
+      {
+        "name": "stamp",
+        "value": ".45s cubic-bezier(.2, .9, .3, 1.2)",
+        "purpose": "세트 완료 체크 칸 scale .6 → 1.12 → 1."
+      },
+      {
+        "name": "settle",
+        "value": ".6s ease-out",
+        "purpose": "방금 완료한 행이 green-tint에서 가라앉음."
+      },
+      {
+        "name": "timer-bar",
+        "value": "width .25s linear",
+        "purpose": "휴식 진행 막대."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "column-max",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "잉크 바탕 주 동작 버튼.",
+      "html": "<button class=\"ds-primary\">저장</button>",
+      "css": ".ds-primary{display:flex;align-items:center;justify-content:center;background:var(--ink,#121212);color:#fff;font-weight:700;min-height:52px;padding:0 18px;border:0;border-radius:0;cursor:pointer}.ds-primary:active{transform:translateY(1px)}.ds-primary:focus-visible{outline:3px solid var(--green-ink,#0B6B4B);outline-offset:2px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "1.5px 잉크 테두리 보조 버튼.",
+      "html": "<button class=\"ds-ghost\">팁·기록</button>",
+      "css": ".ds-ghost{display:inline-flex;align-items:center;gap:4px;background:none;color:var(--ink,#121212);border:1.5px solid var(--ink,#121212);border-radius:0;min-height:44px;padding:0 12px;font-weight:700;font-size:14px;cursor:pointer}.ds-ghost:active{transform:translateY(1px)}.ds-ghost:focus-visible{outline:3px solid var(--green-ink,#0B6B4B);outline-offset:2px}"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "삭제 동작.",
+      "html": "<button class=\"ds-danger\">삭제</button>",
+      "css": ".ds-danger{background:none;border:1.5px solid var(--red,#C3301E);color:var(--red,#C3301E);border-radius:0;min-height:52px;padding:0 18px;font-weight:700;cursor:pointer}.ds-danger:focus-visible{outline:3px solid var(--green-ink,#0B6B4B);outline-offset:2px}"
+    },
+    {
+      "name": "Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "직각 흰 입력.",
+      "html": "<input class=\"ds-input\" value=\"메모\">",
+      "css": ".ds-input{background:#fff;border:1.5px solid var(--ink,#121212);border-radius:0;padding:10px 12px;min-height:48px;font-size:16px;color:var(--ink,#121212);caret-color:var(--green-ink,#0B6B4B)}.ds-input:focus-visible{outline:3px solid var(--green-ink,#0B6B4B);outline-offset:2px}"
+    },
+    {
+      "name": "Nutrition Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "윗변 7px 괘선의 영양정보 표 패널.",
+      "html": "<section class=\"ds-panel\"><h2 class=\"ds-pt\">영양정보</h2><div class=\"ds-big\"><b>열량</b><span><b class=\"ds-v\">2484</b>kcal / 1737kcal</span><b class=\"ds-pct\">143%</b></div><div class=\"ds-row\"><span>지방</span><b>52.6g</b></div></section>",
+      "css": ".ds-panel{background:#fff;color:var(--ink,#121212);border:1.5px solid var(--ink,#121212);border-top:7px solid var(--ink,#121212);padding:12px 14px 14px;font-variant-numeric:tabular-nums}.ds-pt{margin:0;font-weight:900;font-size:28px;letter-spacing:-.02em;padding-bottom:8px;border-bottom:7px solid var(--ink,#121212)}.ds-big{display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:3px solid var(--ink,#121212)}.ds-big>span{flex:1;font-weight:700;font-size:15px}.ds-v{font-size:30px;font-weight:900}.ds-pct{font-size:24px;font-weight:900;color:var(--red,#C3301E)}.ds-row{display:flex;justify-content:space-between;padding:9px 0;font-size:15px}"
+    },
+    {
+      "name": "Set Row (current, done check)",
+      "kind": "custom",
+      "refersTo": "set-row-current",
+      "description": "지금 세트: green-tint 행, 스테퍼, 체크 칸, 아래 줄 지난번 비교.",
+      "html": "<div class=\"ds-set\"><b>2</b><div class=\"ds-step\"><button>−</button><b>55</b><i>kg</i><button>+</button></div><button class=\"ds-check\" aria-label=\"완료\"></button><small>지난번 55×6 <b class=\"ds-up\">+2.5kg</b> <b class=\"ds-pr\">PR</b></small></div>",
+      "css": ".ds-set{display:grid;grid-template-columns:20px 1fr 56px;gap:4px 8px;align-items:center;padding:10px 14px;background:var(--green-tint,#E6F1EA);font-variant-numeric:tabular-nums}.ds-set>small{grid-column:2/4;font-size:13px;color:var(--ink-2,#4F5752)}.ds-step{display:grid;grid-template-columns:56px 1fr 30px 56px;height:52px;border:1.5px solid var(--ink,#121212);background:#fff;align-items:center}.ds-step b{text-align:right;font-size:24px;font-weight:900}.ds-step i{font-style:normal;font-size:14px;font-weight:700;color:var(--ink-2,#4F5752)}.ds-step button{background:none;border:0;font-size:20px;cursor:pointer}.ds-check{width:56px;height:52px;border:2px solid var(--ink,#121212);background:#fff;cursor:pointer}.ds-check:hover{background:var(--green-ink,#0B6B4B);border-color:var(--green-ink,#0B6B4B)}.ds-check:focus-visible{outline:3px solid var(--green-ink,#0B6B4B);outline-offset:2px}.ds-up{font-weight:900;color:var(--green-ink,#0B6B4B)}.ds-pr{background:var(--ink,#121212);color:var(--yellow,#FFD23F);padding:0 6px}"
+    },
+    {
+      "name": "Dock Next Button",
+      "kind": "button",
+      "refersTo": "dock-next",
+      "description": "하단 고정 '다음 세트 완료' 독.",
+      "html": "<button class=\"ds-next\"><span>플랫 벤치프레스 · 3세트</span><b>55kg × 7회 완료</b></button>",
+      "css": ".ds-next{display:flex;flex-direction:column;justify-content:center;width:100%;height:72px;background:var(--green,#0B5D44);color:#fff;text-align:left;padding:0 18px;border:0;border-radius:0;box-shadow:0 6px 18px rgb(18 18 18 / .22);cursor:pointer}.ds-next span{font-size:13px;color:#D5E8DE}.ds-next b{font-size:22px;font-weight:900}.ds-next:active{transform:translateY(1px)}.ds-next:focus-visible{outline:3px solid var(--green-ink,#0B6B4B);outline-offset:2px}"
+    },
+    {
+      "name": "Shell Band",
+      "kind": "custom",
+      "refersTo": "shell-band",
+      "description": "각 탭 맨 위 초록 띠, 제목·부제·진행 세그먼트.",
+      "html": "<header class=\"ds-band\"><h1>가슴</h1><p>11월 18일 · 종목 0/5 · 세트 2/17</p><div class=\"ds-segs\"><i style=\"--p:.5\"></i><i style=\"--p:0\"></i><i style=\"--p:0\"></i></div></header>",
+      "css": ".ds-band{background:var(--green,#0B5D44);color:#fff;padding:14px 16px 12px}.ds-band h1{margin:0;font-weight:900;font-size:30px;line-height:1.1;letter-spacing:-.02em}.ds-band p{margin:4px 0 0;font-size:14px;color:#D5E8DE}.ds-segs{display:flex;gap:3px;margin-top:12px}.ds-segs i{flex:1;height:6px;background:linear-gradient(90deg,#fff calc(var(--p)*100%),rgb(255 255 255 / .25) 0)}"
+    },
+    {
+      "name": "Tab Bar",
+      "kind": "nav",
+      "refersTo": "nav-tab",
+      "description": "하단 4탭, 활성은 위 4px 잉크 막대.",
+      "html": "<nav class=\"ds-nav\"><button class=\"on\">운동</button><button>식단</button><button>기록</button><button>관리</button></nav>",
+      "css": ".ds-nav{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-top:3px solid var(--ink,#121212)}.ds-nav button{height:64px;background:none;border:0;color:var(--ink-2,#4F5752);font-size:12px;font-weight:700;cursor:pointer}.ds-nav button:hover{color:var(--ink,#121212)}.ds-nav button.on{color:var(--ink,#121212);box-shadow:inset 0 4px 0 var(--ink,#121212)}.ds-nav button:focus-visible{outline:3px solid var(--green-ink,#0B6B4B);outline-offset:-3px}"
+    },
+    {
+      "name": "Segment",
+      "kind": "chip",
+      "refersTo": "segment-selected",
+      "description": "끼니 단일 선택, 선택은 잉크 반전.",
+      "html": "<div class=\"ds-seg\"><span class=\"on\">아침</span><span>점심</span><span>저녁</span><span>간식</span></div>",
+      "css": ".ds-seg{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--ink,#121212)}.ds-seg span{display:grid;place-items:center;min-height:44px;font-size:15px;border-left:1px solid var(--ink,#121212);cursor:pointer}.ds-seg span:first-child{border-left:0}.ds-seg span:hover{background:var(--paper,#EEF1EF)}.ds-seg span.on{background:var(--ink,#121212);color:#fff}"
+    }
+  ],
+  "narrative": {
+    "northStar": "영양정보 표시",
+    "overview": "화면 전체가 식품 포장 뒷면의 영양정보 표처럼 읽힌다. 초록빛 도는 연회색 바탕 위에 흰 표가 놓이고, 표는 위쪽 굵은 괘선으로 시작해 굵기가 다른 괘선으로 위계를 나눈다. 숫자는 Pretendard Black의 고정폭 숫자로 크게, 비교값(지난번·목표)은 같은 줄 오른쪽이나 바로 아래 줄에 작게 붙는다. 장식은 없고, 굵기와 괘선과 세 가지 의미색만으로 상태를 말한다.\n\n밀도는 높지만 엄지 기준이다. 표 안의 행은 촘촘하게 괘선으로 쌓이고, 손이 닿는 컨트롤은 44px 이상, 핵심 동작은 하단 고정 독(72px)에 모인다. 모든 모서리는 직각이다. 그림자는 화면 위에 떠 있는 하단 독 하나에만 있다.\n\n셸은 진한 초록 띠다. 각 탭의 맨 위에서 제목과 진행 상황을 싣고, 같은 초록이 하단의 '세트 완료' 독에서 다시 나타나 위아래로 화면을 묶는다.",
+    "keyCharacteristics": [
+      "초록빛 연회색 바탕(paper) 위 흰 표, 잉크 검정 테두리",
+      "7px / 3px / 1px 괘선 위계, 1.5px 외곽 테두리",
+      "모든 모서리 0px",
+      "Pretendard 400 / 700 / 900, 숫자는 전부 고정폭(tnum)",
+      "의미색 셋: 초록 계열 = 셸·완료, 노랑 = PR, 빨강 = 목표 초과·감소",
+      "그림자는 하단 독에만"
+    ],
+    "rules": [
+      {
+        "name": "The 색 하나 의미 하나 Rule",
+        "body": "초록 계열은 셸과 완료(및 그 진행: 지금 세트·증가), 노랑은 PR, 빨강은 목표 초과·감소에만 쓴다. 그 밖의 모든 강조는 잉크의 굵기와 반전(잉크 바탕 흰 글자)으로 한다.",
+        "section": "colors"
+      },
+      {
+        "name": "The 잉크 반전 Rule",
+        "body": "선택 상태(세그먼트, 탭, 슈퍼세트 태그, 주 버튼)는 색이 아니라 잉크 바탕 + 흰 글자로 표시한다.",
+        "section": "colors"
+      },
+      {
+        "name": "The 숫자는 Black Rule",
+        "body": "기록되는 값(무게, 횟수, kcal, g, 퍼센트, 세트 번호)은 900으로, 단위와 비교 문장은 400–700으로 작게 붙인다.",
+        "section": "typography"
+      },
+      {
+        "name": "The 끊지 않는 한글 Rule",
+        "body": "제목·종목명·행 이름은 word-break: keep-all로 어절 단위 줄바꿈한다.",
+        "section": "typography"
+      },
+      {
+        "name": "The 괘선 위계 Rule",
+        "body": "7px 잉크 괘선은 패널·대화상자의 윗변과 라벨 머리 아래(새 표의 시작), 3px 잉크 괘선은 열 머리 아래·큰 영양 항목 아래·탭바 윗변·대화상자 안 소제목 위, 1px 잉크 괘선은 표 안 첫 행과 영양 세부 행, 1px hair 괘선은 데이터 행 사이. 외곽 테두리는 1.5px 잉크.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** 새 표면을 흰 패널로 시작하고 윗변을 7px 잉크 괘선으로 연다.",
+      "**Do** 열 머리 아래는 3px 잉크, 데이터 행 사이는 1px hair로 나눈다.",
+      "**Do** 기록 값은 Pretendard 900 고정폭 숫자로, 비교값은 같은 줄 오른쪽이나 바로 아래 줄에 ink-2로 붙인다.",
+      "**Do** 터치 대상은 44px 이상, 주 동작은 52px 이상, 세트 완료는 하단 독(72px)에 둔다.",
+      "**Do** 선택 상태는 잉크 바탕 + 흰 글자로 표시한다.",
+      "**Do** 모션은 상태 변화(세트 완료 도장)에만 쓰고 prefers-reduced-motion에서 끈다."
+    ],
+    "donts": [
+      "**Don't** 모서리를 둥글게 하지 않는다. 모든 radius는 0px.",
+      "**Don't** 초록·노랑·빨강을 장식이나 일반 강조에 쓰지 않는다. 각 색은 정해진 한 가지 상태에만 쓴다.",
+      "**Don't** 하단 독 외의 요소에 그림자를 주지 않는다.",
+      "**Don't** 흰 카드 목록 + 파란 버튼의 운동앱 기본형으로 돌아가지 않는다.",
+      "**Don't** 지난번 기록을 다른 화면이나 접힌 영역으로 숨기지 않는다."
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { lastSession, isPR, nextRoutine, routineNames, nutrition, sumNutrition, applyOp, byOrder } from './logic.js';
+import { focusIndex, nextSet, delta, lastSession, isPR, nextRoutine, routineNames, nutrition, sumNutrition, applyOp, byOrder } from './logic.js';
 
 const recs = [
   { 날짜: '2026-11-10', 루틴명: '가슴날', 운동명: '벤치', 세트번호: 1, 무게: 50, 횟수: 8 },
@@ -39,5 +39,24 @@ applyOp(data, { op: 'put', tab: '기록', row: { id: 'b', 운동명: 'x' } });
 applyOp(data, { op: 'rename', tab: '기록', col: '운동명', from: 'x', to: 'y' });
 applyOp(data, { op: 'del', tab: '기록', id: 'b' });
 assert.deepEqual(data.기록, [{ id: 'a', 운동명: 'y', 무게: 2 }]);
+
+const S = (...ids) => ids.map(id => ({ id }));
+const items = [
+  { sets: S('a', 'b') },
+  { superset: '삼두', sets: S('c', null, null) },
+  { superset: '삼두', sets: S(null, null, null) },
+];
+assert.equal(focusIndex(items, null), 1);
+assert.equal(focusIndex(items, 0), 1); // 끝난 종목을 골라도 남은 종목으로
+assert.deepEqual(nextSet(items, null), { i: 2, j: 0 }); // A 1세트 끝 → B 1세트
+items[2].sets[0].id = 'd';
+assert.deepEqual(nextSet(items, null), { i: 1, j: 1 }); // → A 2세트
+assert.equal(nextSet([{ sets: S('x') }], null), null);
+
+assert.deepEqual(delta({ 무게: 55, 횟수: 6 }, 57.5, 6), { text: '+2.5kg', up: true });
+assert.deepEqual(delta({ 무게: 55, 횟수: 6 }, '55', '5'), { text: '-1회', up: false });
+assert.deepEqual(delta({ 무게: 55, 횟수: 6 }, 55, 6), { text: '같음', up: null });
+assert.equal(delta(null, 55, 6), null);
+assert.equal(delta({ 무게: 55, 횟수: 6 }, '', 6), null);
 
 console.log('ok');

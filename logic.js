@@ -62,3 +62,33 @@ export function applyOp(data, op) {
     else rows.push({ ...op.row });
   }
 }
+
+const undone = it => it.sets.findIndex(s => !s.id);
+
+// 지금 초점 종목: 사용자가 고른 종목(남은 세트가 있을 때) 아니면 남은 세트가 있는 첫 종목
+export function focusIndex(items, focus) {
+  if (focus != null && items[focus] && undone(items[focus]) >= 0) return focus;
+  return items.findIndex(it => undone(it) >= 0);
+}
+
+// 다음에 할 세트. 슈퍼세트 묶음은 세트 번호가 작은 쪽부터 A→B→A→B 순으로 번갈아 간다.
+export function nextSet(items, focus) {
+  const f = focusIndex(items, focus);
+  if (f < 0) return null;
+  const ss = items[f].superset;
+  const group = ss ? items.map((_, i) => i).filter(i => items[i].superset === ss) : [f];
+  let best = null;
+  group.forEach(i => { const j = undone(items[i]); if (j >= 0 && (!best || j < best.j)) best = { i, j }; });
+  return best;
+}
+
+// 지난번 같은 세트 대비 차이. 무게가 다르면 무게, 같으면 횟수.
+export function delta(last, w, r) {
+  if (!last || w === '' || r === '' || w == null || r == null) return null;
+  const dw = Math.round((Number(w) - Number(last.무게)) * 100) / 100;
+  const dr = Number(r) - Number(last.횟수);
+  const sign = n => (n > 0 ? `+${n}` : `${n}`);
+  if (dw) return { text: `${sign(dw)}kg`, up: dw > 0 };
+  if (dr) return { text: `${sign(dr)}회`, up: dr > 0 };
+  return { text: '같음', up: null };
+}

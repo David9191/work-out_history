@@ -1,5 +1,5 @@
 // 앱 파일을 캐시해 즉시 열고, 뒤에서 최신 버전을 받아둔다 (다음 실행에 반영).
-const CACHE = 'app-v1';
+const CACHE = 'app-v3';
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
 self.addEventListener('fetch', e => {
