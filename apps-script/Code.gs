@@ -1,3 +1,4 @@
+/** @OnlyCurrentDoc */ // 권한을 이 스프레드시트 하나로 제한
 // 운동·식단 기록 API. 스프레드시트의 확장 프로그램 → Apps Script에 붙여넣고 웹앱으로 배포.
 // 스크립트 속성에 TOKEN 을 설정해야 동작한다.
 const TABS = ['종목', '루틴', '기록', '음식', '식단템플릿', '식단기록', '설정'];
@@ -51,7 +52,7 @@ function readAll_() {
     const head = v.shift();
     const rows = [];
     v.forEach(function (r, i) {
-      if (r.every(function (c) { return c === ''; })) return;
+      if (r.every(function (c) { return c === '' || c === false; })) return; // 체크박스만 있는 빈 행 제외
       if (!r[0]) { // 시트에서 직접 추가한 행: id 자동 부여
         r[0] = Utilities.getUuid().slice(0, 8);
         sh.getRange(i + 2, 1).setValue(r[0]);
@@ -79,12 +80,15 @@ function apply_(op) {
     return;
   }
   const id = String(op.op === 'del' ? op.id : op.row.id);
-  const ids = sh.getRange(1, 1, last, 1).getValues().map(function (r) { return String(r[0]); });
+  const firstTwo = sh.getRange(1, 1, last, 2).getValues();
+  const ids = firstTwo.map(function (r) { return String(r[0]); });
   const i = ids.indexOf(id); // 0 은 헤더라 무시
   if (op.op === 'del') { if (i > 0) sh.deleteRow(i + 1); return; }
   if (op.op !== 'put') throw new Error('unknown op: ' + op.op);
   const old = i > 0 ? sh.getRange(i + 1, 1, 1, head.length).getValues()[0] : [];
   const row = head.map(function (h, j) { return h in op.row ? op.row[h] : (old[j] === undefined ? '' : old[j]); });
-  if (i > 0) sh.getRange(i + 1, 1, 1, head.length).setValues([row]);
+  // 체크박스 등 서식만 있는 행 때문에 appendRow 가 맨 아래로 가지 않도록 id 빈 첫 행에 쓴다
+  const at = i > 0 ? i : firstTwo.findIndex(function (r, k) { return k > 0 && r[0] === '' && r[1] === ''; });
+  if (at > 0) sh.getRange(at + 1, 1, 1, head.length).setValues([row]);
   else sh.appendRow(row);
 }
